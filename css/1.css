@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen 
+and (min-device-width : 666px)
+and (max-device-width : 1366px) 
+and (orientation : landscape) 
+{
+
+/* @media only screen and (min-width: 481px) { */
+
+.gridContainer {
+	width: 92.5%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+	margin-top:2.5%;
+}
+
+.cellpadd{
+	margin-left:1%;
+	font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+	font-size:24px;
+	color:#00a1d5;
+	text-align:center;
+}
+
+#innerdiv {
+	padding-top:0.5%;
+	padding-left:1%;
+	padding-right:1%;
+	padding-bottom:0.5%;
+;
+}
+
+#outertable {
+	border:thin;
+	background-color:#E9E9E9;
+	width:100%;
+	height:100%;
+}
+
+#innertable {
+	border-collapse:separate;
+	border-spacing:10px;	
+}
+
+#innertable-ppl {
+	border-collapse:separate;
+	border-spacing:1px;
+}
+
+#bannertable {
+	background-color:white;
+	border-collapse:separate;
+	border-spacing:0px;
+}
+
+#innertable-ppl-txt {
+	background-color:#66c6e7;
+	color:white;
+}
+
+#companyalignment{
+	padding-left:1%;
+	background-color:#9ED9ED;
+	border:thick;
+	width:27%;
+	border-color:white;
+	border-style:solid;
+	display:inline-table;
+}
+
+#valuealignment{
+	text-align:center;
+	background-color:#0B3140;
+	color:white;
+	border:thick;
+	width:27%;
+	border-color:white;
+	border-style:solid;
+	display:inline-table;
+}
+
+#overview{
+	float:left;
+	text-align:center;
+	background-color:#383838;
+	color:white;
+	border:thin;
+	width:56%;
+	border-color:white;
+	border-style:solid;
+}
+
+#digitalx {
+	text-align:center;
+	background-color:#0B3140;
+	color:white;
+	border:thick;
+	display:inline-table;
+	width:25%;
+	border-color:white;
+	border-style:solid;	
+}
+
+#assetsip{
+	text-align:center;	
+	background-color:#9ED9ED;
+	border:thick;
+	display:inline-table;
+	width:25%;
+	border-color:white;
+	border-style:solid;
+}
+
+#people {
+	text-align:center;	
+	background-color:#0B3140;
+	color:white;
+	border:thick;
+	display:inline-table;
+	width:25%;
+	border-color:white;
+	border-style:solid;
+}
+
+#voice {
+	text-align:center;	
+	background-color:#9ED9ED;
+	border:thick;
+	display:inline-table;
+	width:20%;
+	border-color:white;
+	border-style:solid;
+}
+
+
+.play_video{
+	background :transparent url(..\\images\\play.png) no-repeat center center;
+	display :block;
+	position :absolute;
+}
+
+.zeroMargin_tablet {
+    margin-left: 0;
+}
+.hide_tablet {
+    display: none;
+}
+}
+
